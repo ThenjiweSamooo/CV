@@ -45,7 +45,10 @@ hr {
 
 /* Navigation Bar */
 
-  
+  #title .navbar {
+    margin: 0 50px;
+  }
+
    .navbar {
       padding-bottom: 1rem;
       padding-left: 0;
@@ -70,11 +73,11 @@ hr {
 /* Banner */
 
 #banner {
-    padding-top: 20px;
+    padding-top: 60px;
 }
 
 .intro {
-    font-size: 3rem;
+    font-size: 4rem;
     padding-bottom: 30px;
 }
 
@@ -86,34 +89,89 @@ hr {
 }
 
 .typing-gif {
-    width: 25%;
+    width: 20rem;
 }
+
+/* Typing Effect */
+
+.typewriter h2 {
+    color: #fff;
+    font-size: 1.2rem;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #B9AFFA; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #B9AFFA }
+  }
+
+ /* End Typing Effect */
 
 /* About */
 
 #about {
-    background-color: #E3DFFD;
+    background-color: #fff;
     color: grey;
-    padding: 40px 0 40px;
+    padding: 60px 0 60px;
 }
 
-#about h2 {
-    color: #000;
+#about h1 {
+    color: #928BB7;
 }
 
-.profile-image {
-    width: 30%;
-    padding-bottom: 40px;
+#about p {
+    margin: 40px 5rem 50px;
 }
+
+#about .btn {
+  margin: 0.5rem;
+  background-color: #928BB7;
+  color: #fff;
+}
+
+#about .btn:hover {
+  background-color: #B9AFFA;
+}
+
+.bitmoji {
+    background-color: #928BB7;
+    margin-bottom: 40px;
+    border-radius: 80px;
+    width: 10rem
+}
+
 
 .profile-text {
     text-align: left;
+}
+
+.fa-user-tag,
+.blue,
+.list-inline-item i:hover {
+  color: #928BB7;
+  transition: all 0.2s ease-in-out;
 }
 
 /* Skills */
 
  #skills {
     text-align: center;
+    color: #fff;
+    padding: 3rem 0 3rem;
  }
 
   .list-inline {
@@ -125,42 +183,101 @@ hr {
   }
   
   #skill-bars {
-    width: 50%;
+    width: 60%;
   }
   
   .progress-bar,
   #skills.btn {
-    background-image: linear-gradient(
-      to right,
-      #EFE8EB,
-      #DED1D6,
-      #CEBAC2,
-      #BDA2AD,
-      #AD8B99
-    );
-  }
-  
-  .fa-user-tag,
-  .blue,
-  .list-inline-item i:hover {
-    color: #fff;
-    transition: all 0.2s ease-in-out;
+    background-color: #928BB7;
   }
 
 /* Portfolio */
+
+#portfolio {
+    background-color: #fff;
+    padding: 3rem 0 5rem;
+}
+
+#portfolio h2 {
+    color: gray;
+    padding-bottom: 3rem;
+}
+
+.hover-wrapper {
+    overflow: hidden;
+  }
+  .hover-wrapper img h2 {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+  }
+  .hover-wrapper:hover img {
+    transform: scale(1);
+  }
+  .hover-wrapper:hover .hover-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .hover-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+  }
+  
+  .hover-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
 
 /* Experience */
 
 /* Services */
 
+#services {
+  padding: 3rem 0 3rem;
+}
+
+.services-img {
+  width: 12rem;
+  padding: 20px;
+  filter: invert(1);
+}
+
+.services-item {
+  padding: 10px;
+}
+
 /* Shop */
 
 /* Contact */
 
-#contact-me {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    line-height: 2;
+#contact {
+  background-color: #fff;
+  color: gray;
+  padding: 3rem 0 4rem;
+}
+
+#contact h2 {
+  color: gray;
+}
+
+#contact a {
+  color: gray;
+}
+
+#contact .btn {
+  margin-top: 2rem;
 }
 
 .bottom-copyright {
@@ -171,26 +288,76 @@ hr {
     -webkit-border-radius: 14;
     -moz-border-radius: 14;
     border-radius: 14px;
-    font-family: Courier New;
-    color: #ffffff;
-    font-size: 20px;
+    font-family: 'Ubuntu';
+    color: grey;
+    font-size: 1rem;
     background: A#B9AFFA;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
   }
   
   .btn:hover {
-    background: #E3DFFD;
+    background: #fff;
+    color: #928BB7;
     text-decoration: none;
+  }
+
+  .contact-image {
+    width: 10rem;
+  }
+
+  .contact-email-image {
+    width: 2.5rem;
   }
 
 /* Footer */
 
 #footer {
+  color: #fff;
     background-color: #B9AFFA;
     line-height: 2;
+    padding: 3rem 0 3rem;
+}
+
+.footer-icons {
+  color: #fff;
 }
 
 .bottom-contact {
     margin-bottom: 0;
+  }
+
+  .contact-btn {
+    background-color: #928BB7;
+    color: #fff;
+  }
+
+  .contact-btn:hover {
+    background-color: #B9AFFA;
+    color: #fff;
+  }
+
+  /* Pages */
+
+  /* Profile */
+
+  .page-title {
+    position: relative;
+    top: 75px;
+  }
+
+  .navbar-profile {
+    background-color: #B9AFFA;
+  }
+
+  /* Portfolio */
+
+  .portfolio-grid {
+    position: relative;
+    top: 80px;
+    padding-top: 20px;
+  }
+
+  .portfolio-footer {
+    position: relative;
   }
